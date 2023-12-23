@@ -11,7 +11,7 @@ export const light = {
   UNCOMMON_COLOR: '#22BB22',
   RARE_COLOR: '#0000CC',
   VERY_RARE_COLOR: '#AA00AA',
-  LEGENDARY_COLOR: '#EE8800',
+  LEGENDARY_COLOR: '#FF4D01',
 };
 
 export const dark = {
