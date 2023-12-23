@@ -13,7 +13,7 @@ export const roll = (damageRolls, damageModifier, name) => {
       return damage + ' ' + damageType.toLowerCase();
     })
     .join(' + ');
-  return `Rolled ${name} for\n${total} (${result})`;
+  return `Rolled ${name} for\n${total} (${result}) damage`;
 };
 
 export const getAbilityType = (range, properties) => {
