@@ -122,8 +122,8 @@ export const AttackNavigator = () => {
           title: 'Edit attack',
           headerRight: () => (
             <Pressable
-              onPress={() => {
-                deleteAttack(route.params.attack.id);
+              onPress={async () => {
+                await deleteAttack(route.params.attack.id);
                 navigation.goBack();
               }}
             >

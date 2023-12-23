@@ -46,7 +46,7 @@ export const putAttack = async (attack) => {
     range.longRange = normalRange;
   }
 
-  fetch(`${apiUrl}/attacks/${id}`, {
+  await fetch(`${apiUrl}/attacks/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export const putAttack = async (attack) => {
 export const postAttacks = async (weapon) => {
   const { attacks, damageModifier, properties } = weapon;
   for (let { name, range, damageRolls } of attacks) {
-    fetch(`${apiUrl}/attacks`, {
+    await fetch(`${apiUrl}/attacks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export const getAttacks = async () => {
 };
 
 export const deleteAttack = async (id) => {
-  fetch(`${apiUrl}/attacks/${id}`, {
+  await fetch(`${apiUrl}/attacks/${id}`, {
     method: 'DELETE',
   }).catch((error) => {
     console.error('Error deleting attack', error);

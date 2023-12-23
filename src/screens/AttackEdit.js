@@ -86,7 +86,7 @@ const AttackEdit = ({ route, navigation }) => {
     }
   };
 
-  const saveChanges = () => {
+  const saveChanges = async () => {
     const editAttack = {
       id: id,
       name: editName,
@@ -95,7 +95,8 @@ const AttackEdit = ({ route, navigation }) => {
       damageRolls: editDamageRolls,
       range: editRange,
     };
-    putAttack(editAttack).then(navigation.goBack());
+    await putAttack(editAttack);
+    navigation.goBack();
   };
 
   return (
