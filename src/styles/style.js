@@ -48,6 +48,7 @@ export const createBottomStyles = () => {
       position: 'absolute',
       bottom: 0,
       backgroundColor: theme.BUTTON_COLOR,
+      textAlign: 'center',
     },
   });
 };

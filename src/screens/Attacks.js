@@ -54,7 +54,11 @@ const Attacks = ({ navigation }) => {
             style={pressable}
             onPress={() => {
               setRollResult(
-                roll(damageRolls, damageModifier + getExtraDamage(abilityType))
+                roll(
+                  damageRolls,
+                  damageModifier + getExtraDamage(abilityType),
+                  name
+                )
               );
             }}
           >
@@ -119,7 +123,7 @@ const createStyles = () => {
       color: theme.TEXT_COLOR,
     },
     list: {
-      paddingBottom: 60,
+      paddingBottom: 80,
     },
     infoContainer: {
       width: width - 100,

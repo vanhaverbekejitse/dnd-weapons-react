@@ -1,5 +1,4 @@
 import { hasRange } from './RollUtils';
-
 export const getDamageText = (damageRolls, damageModifier) => {
   let damageModifierString = '';
   if (damageModifier > 0) {

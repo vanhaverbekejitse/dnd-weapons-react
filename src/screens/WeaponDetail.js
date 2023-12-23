@@ -43,7 +43,7 @@ const WeaponDetail = ({ route, navigation }) => {
   }, []);
 
   if (!weapon) {
-    return <Text style={loadFailed}>Unable to load weapon details.</Text>;
+    return <Text style={loadFailed}>Unable to load weapon details</Text>;
   }
 
   const {

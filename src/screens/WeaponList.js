@@ -41,6 +41,21 @@ const WeaponList = ({ navigation }) => {
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const getRarityColor = (rarity) => {
+    switch (rarity) {
+      case 'Uncommon':
+        return theme.UNCOMMON_COLOR;
+      case 'Rare':
+        return theme.RARE_COLOR;
+      case 'Very rare':
+        return theme.VERY_RARE_COLOR;
+      case 'Legendary':
+        return theme.LEGENDARY_COLOR;
+      default:
+        return theme.TEXT_COLOR;
+    }
+  };
+
   return (
     <View style={container}>
       <TextInput
@@ -54,14 +69,18 @@ const WeaponList = ({ navigation }) => {
         style={list}
         data={filteredWeapons}
         keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item, item: { name, weaponType } }) => (
+        renderItem={({ item, item: { name, weaponType, rarity } }) => (
           <Pressable
             style={pressable}
             onPress={() => navigation.navigate('Detail', { listWeapon: item })}
           >
             <View style={left}>
               <Image style={image} source={getImagePath(weaponType)} />
-              <ThemedText style={[listItem, nameText]}>{name}</ThemedText>
+              <ThemedText
+                style={[{ color: getRarityColor(rarity) }, listItem, nameText]}
+              >
+                {name}
+              </ThemedText>
             </View>
             <Ionicons
               style={listItem}

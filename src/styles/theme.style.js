@@ -7,6 +7,11 @@ export const light = {
   DELETE_COLOR: '#BB0000',
   TEXT_COLOR: '#000000',
   BUTTON_COLOR: '#A0A0A0',
+
+  UNCOMMON_COLOR: '#22BB22',
+  RARE_COLOR: '#0000CC',
+  VERY_RARE_COLOR: '#AA00AA',
+  LEGENDARY_COLOR: '#EE8800',
 };
 
 export const dark = {
@@ -18,4 +23,9 @@ export const dark = {
   DELETE_COLOR: '#BB0000',
   TEXT_COLOR: '#C0C0C0',
   BUTTON_COLOR: '#C0C0C0',
+
+  UNCOMMON_COLOR: '#00CC00',
+  RARE_COLOR: '#0E86D4',
+  VERY_RARE_COLOR: '#BB00BB',
+  LEGENDARY_COLOR: '#FFA500',
 };

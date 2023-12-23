@@ -1,4 +1,8 @@
 import { getAbilityType, hasRange } from './RollUtils';
+import { weaponsData } from '../assets/data/weaponsData.js';
+import { attacksData } from '../assets/data/attacksData.js';
+import { weaponsDetailData } from '../assets/data/weaponDetailData.js';
+import { weaponPropertiesData } from '../assets/data/weaponPropertiesData.js';
 
 export const apiUrl = 'https://dnd-weapons.azurewebsites.net';
 
@@ -8,7 +12,7 @@ export const getWeaponsByName = async (search) => {
     .then((data) => data.sort((a, b) => a.name.localeCompare(b.name)))
     .catch((error) => {
       console.error('Error getting weapons', error);
-      return [];
+      return weaponsData; // voorbeeld data als api niet werkt
     });
 };
 
@@ -17,6 +21,7 @@ export const getWeapon = async (id) => {
     .then((res) => res.json())
     .catch((error) => {
       console.log(`Error getting weapon with id=${id}`, error);
+      return weaponsDetailData; // voorbeeld data als api niet werkt
     });
 };
 
@@ -25,6 +30,7 @@ export const getWeaponWithProperties = async (id) => {
     .then((res) => res.json())
     .catch((error) => {
       console.log(`Error getting weapon with id=${id}`, error);
+      return weaponPropertiesData; // voorbeeld data als api niet werkt
     });
 };
 
@@ -90,7 +96,7 @@ export const getAttacks = async () => {
     .then((data) => data.sort((a, b) => a.name.localeCompare(b.name)))
     .catch((error) => {
       console.log('Error getting attacks', error);
-      return [];
+      return attacksData; // voorbeeld data als api niet werkt
     });
 };
 

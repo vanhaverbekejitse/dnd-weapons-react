@@ -21,10 +21,14 @@ const WeaponProperties = ({ route }) => {
   }, []);
 
   if (!weapon) {
-    return <Text style={loadFailed}>Unable to load weapon properties.</Text>;
+    return <Text style={loadFailed}>Unable to load weapon properties</Text>;
   }
 
-  const { properties } = weapon;
+  const { properties, name } = weapon;
+
+  if (!properties.length) {
+    return <Text style={loadFailed}>{name} has no properties</Text>;
+  }
 
   return (
     <View style={container}>

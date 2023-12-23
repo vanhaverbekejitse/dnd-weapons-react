@@ -29,6 +29,11 @@ const ListStatCard = ({ name, values }) => {
           <ThemedText style={nameText}>{name}</ThemedText>
         )}
       </View>
+      {!values.length && (
+        <View style={valueContainer}>
+          <Text style={valueText}>No properties</Text>
+        </View>
+      )}
       {values.map((value) => (
         <View key={value} style={valueContainer}>
           <Text style={valueText}>{value}</Text>

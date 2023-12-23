@@ -1,4 +1,4 @@
-export const roll = (damageRolls, damageModifier) => {
+export const roll = (damageRolls, damageModifier, name) => {
   let total = 0;
   let result = damageRolls
     .map(({ amount, dieType, damageType }, index) => {
@@ -13,7 +13,7 @@ export const roll = (damageRolls, damageModifier) => {
       return damage + ' ' + damageType.toLowerCase();
     })
     .join(' + ');
-  return `${total} (${result})`;
+  return `Rolled ${name} for\n${total} (${result})`;
 };
 
 export const getAbilityType = (range, properties) => {
