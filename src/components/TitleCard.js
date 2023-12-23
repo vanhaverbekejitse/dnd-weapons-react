@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image, useWindowDimensions } from 'react-native';
-import { getProficiencyText } from '../utils/TextUtils';
+import { getWeaponTitle } from '../utils/TextUtils';
 import { getImagePath } from '../utils/ImageUtils';
 import { createStatCardStyles } from '../styles/style';
 import ThemedText from './ThemedText';
@@ -11,14 +11,12 @@ const TitleCard = ({ weapon }) => {
   const { subTitle, image } = createStyles();
   const imageSize = useWindowDimensions().width > 600 ? 180 : 100;
 
-  const { isMartial, weaponType } = weapon;
+  const { weaponType } = weapon;
 
   return (
     <View style={container}>
       <View style={nameContainer}>
-        <ThemedText style={subTitle}>
-          {getProficiencyText(isMartial)} {weaponType}
-        </ThemedText>
+        <ThemedText style={subTitle}>{getWeaponTitle(weapon)}</ThemedText>
       </View>
       <View style={valueContainer}>
         <Image

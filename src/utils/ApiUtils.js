@@ -3,7 +3,7 @@ import { getAbilityType, hasRange } from './RollUtils';
 export const apiUrl = 'https://dnd-weapons.azurewebsites.net';
 
 export const getWeaponsByName = async (search) => {
-  return fetch(`${apiUrl}/weapons/search?query=${search}`)
+  return await fetch(`${apiUrl}/weapons/search?query=${search}`)
     .then((res) => res.json())
     .then((data) => data.sort((a, b) => a.name.localeCompare(b.name)))
     .catch((error) => {
@@ -13,7 +13,7 @@ export const getWeaponsByName = async (search) => {
 };
 
 export const getWeapon = async (id) => {
-  return fetch(`${apiUrl}/weapons/${id}`)
+  return await fetch(`${apiUrl}/weapons/${id}`)
     .then((res) => res.json())
     .catch((error) => {
       console.log(`Error getting weapon with id=${id}`, error);
@@ -21,7 +21,7 @@ export const getWeapon = async (id) => {
 };
 
 export const getWeaponWithProperties = async (id) => {
-  return fetch(`${apiUrl}/weapons/${id}/properties`)
+  return await fetch(`${apiUrl}/weapons/${id}/properties`)
     .then((res) => res.json())
     .catch((error) => {
       console.log(`Error getting weapon with id=${id}`, error);
@@ -46,7 +46,7 @@ export const putAttack = async (attack) => {
     range.longRange = normalRange;
   }
 
-  return fetch(`${apiUrl}/attacks/${id}`, {
+  fetch(`${apiUrl}/attacks/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export const postAttacks = async (weapon) => {
 };
 
 export const getAttacks = async () => {
-  return fetch(`${apiUrl}/attacks`)
+  return await fetch(`${apiUrl}/attacks`)
     .then((res) => res.json())
     .then((data) => data.sort((a, b) => a.name.localeCompare(b.name)))
     .catch((error) => {

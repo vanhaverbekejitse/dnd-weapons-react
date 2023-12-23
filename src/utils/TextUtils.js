@@ -17,10 +17,6 @@ export const getDamageText = (damageRolls, damageModifier) => {
     .join(' + ');
 };
 
-export const getProficiencyText = (isMartial) => {
-  return isMartial ? 'Martial' : 'Simple';
-};
-
 export const addPlusSign = (number) => {
   let numberString = number.toString();
   if (number >= 0) {
@@ -35,4 +31,12 @@ export const getRangeText = (range) => {
     return `${rangeType} (${normalRange}/${longRange})`;
   }
   return rangeType;
+};
+
+export const getWeaponTitle = (weapon) => {
+  const { isMartial, attacks } = weapon;
+  const isMelee = attacks.some((attack) => !hasRange(attack.range.rangeType));
+  const proficiencyText = isMartial ? 'Martial' : 'Simple';
+  const baseTypeText = isMelee ? 'melee' : 'ranged';
+  return `${proficiencyText} ${baseTypeText} weapon`;
 };

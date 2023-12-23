@@ -102,13 +102,7 @@ export const WeaponListNavigator = () => {
           title: route.params.listWeapon.name,
         })}
       />
-      <WeaponStack.Screen
-        name='Properties'
-        component={WeaponProperties}
-        options={({ route }) => ({
-          title: `${route.params.listWeapon.name} properties`,
-        })}
-      />
+      <WeaponStack.Screen name='Properties' component={WeaponProperties} />
     </WeaponStack.Navigator>
   );
 };
