@@ -1,10 +1,10 @@
 # Dnd weapons app
 
 React native app gemaakt voor Cross platform development\
-Api: https://github.com/vanhaverbekejitse/dnd-weapons\
+Api: https://github.com/vanhaverbekejitse/dnd-weapons \
 (kan even duren voordat data getoond wordt omdat api gaat idle als er even geen calls zijn geweest)
 
-- Informatie over de wapens in dnd te raadplegen
+- Informatie over de wapens in dnd raadplegen
 - Wapens attacks gebruiken als template om damage to berekenen/rollen
 
 ## Weapons
