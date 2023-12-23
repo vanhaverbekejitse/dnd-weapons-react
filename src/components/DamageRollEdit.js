@@ -15,15 +15,8 @@ const DamageRollEdit = ({
   onChangeDamageType,
   onDeletePress,
 }) => {
-  const {
-    rollField,
-    inputGroup,
-    valueText,
-    textInput,
-    dieText,
-    pressable,
-    smallGroup,
-  } = createStyles();
+  const { rollField, inputGroup, valueText, textInput, dieText, pressable } =
+    createStyles();
   const { theme } = useAppContext();
 
   return (
@@ -104,11 +97,6 @@ const createStyles = () => {
     },
     pressable: {
       marginBottom: 5,
-    },
-    smallGroup: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
     },
   });
 };
