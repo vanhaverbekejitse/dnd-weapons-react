@@ -1,11 +1,11 @@
 # Dnd weapons app
 
 React native app gemaakt voor Cross platform development\
-Api: https://github.com/vanhaverbekejitse/dnd-weapons
+Api: https://github.com/vanhaverbekejitse/dnd-weapons\
 (kan even duren voordat data getoond wordt omdat api gaat idle als er even geen calls zijn geweest)
 
 - Informatie over de wapens in dnd te raadplegen
-- Wapens attacks gebruiken als template om damage to bereken/rollen
+- Wapens attacks gebruiken als template om damage to berekenen/rollen
 
 ## Weapons
 
@@ -38,7 +38,7 @@ Verwijderen kan door op het vuilbakje de drukken
 - Name: de naam van de attack
 - Damage modifier: extra damage die bij de andere rolls/modifiers wordt bijgeteld
 - Ability type: welke ability modifier er wordt gebruikt bij de berekening
-  -> Strenght, dexterity, spellcasting of finesse (Zowel strength en dexterity)
+  -> Strenght, dexterity, spellcasting of finesse (zowel strength als dexterity)
 - Damage rolls: welke dobbelstenen er gerold worden om damage te berkenen (mistens 1)
   - Aantal keer dat er gerold wordt
   - Aantal zijden van de dobbelsteen
