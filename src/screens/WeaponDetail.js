@@ -107,9 +107,9 @@ const WeaponDetail = ({ route, navigation }) => {
       </ScrollView>
       <Pressable
         style={bottom}
-        onPress={() => {
+        onPress={async () => {
+          await postAttacks(weapon);
           setButtonText('Attacks added!');
-          postAttacks(weapon);
         }}
       >
         <Text selectable={false} style={button}>
