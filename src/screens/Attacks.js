@@ -28,15 +28,15 @@ const Attacks = ({ navigation }) => {
   const isFocused = useIsFocused();
 
   const [attacks, setAttacks] = useState([]);
-  const [rollResult, setRollResult] = useState(
-    'Press an attack to roll for damage!'
-  );
+  const [rollResult, setRollResult] = useState('Loading data...');
 
   useEffect(() => {
     if (isFocused) {
+      setRollResult('Loading data...');
       getAttacks()
         .then((data) => setAttacks(data))
-        .catch((error) => console.error(error));
+        .catch((error) => console.error(error))
+        .finally(() => setRollResult('Press an attack to roll for damage!'));
     }
   }, [isFocused]);
 
