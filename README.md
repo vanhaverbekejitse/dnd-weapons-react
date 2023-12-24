@@ -39,20 +39,20 @@ De informatie wordt op de standaarmanier van dnd weergegeven.\
 De geselecteerde aanval aanpassen\
 Verwijderen kan door op het vuilbakje de drukken
 
-- Name: de naam van de aanval
-- Damage modifier: schade die bij de andere rolls/modifiers wordt bijgeteld
-- Ability type: welke ability modifier er wordt gebruikt bij de berekening
+- **Name:** de naam van de aanval
+- **Damage modifier:** schade die bij de andere rolls/modifiers wordt bijgeteld
+- **Ability type:** welke ability modifier er wordt gebruikt bij de berekening
   -> Strenght, dexterity, finesse (neemt de hoogste van strength en dexterity) of spellcasting
-- Damage rolls: welke dobbelstenen er gerold worden om schade te berkenen (mistens 1)
+- **Damage rolls:** welke dobbelstenen er gerold worden om schade te berkenen (mistens 1)
   - Aantal keer dat er gerold wordt
   - Aantal zijden van de dobbelsteen
   - Type van de damage
-- Range: de afstand (in feet) waarop de attack kan uitgevoerd worden
+- **Range:** de afstand (in feet) waarop de attack kan uitgevoerd worden
   - Melee is altijd 5 feet
   - Reach is altijd 10 feet
   - Bij ranged en thrown heb je een normal range en een long range
-    - Normal range: afstand waarop je de aanval zonder disadvantage kan uitvoeren
-    - Long range: maximale afstand
+    - **_Normal range:_** afstand waarop je de aanval zonder disadvantage kan uitvoeren
+    - **_Long range:_** maximale afstand
 
 ## Settings
 
