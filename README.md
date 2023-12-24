@@ -1,11 +1,11 @@
 # Dnd weapons app
 
-React native app gemaakt voor Cross platform development\
+React native app gemaakt voor Cross platform development. De app moet het gemakkelijker maken voor een dnd speler om de schade van zijn verschillende aanvallen te berekenen.\
 Api: https://github.com/vanhaverbekejitse/dnd-weapons \
-(kan even duren voordat data getoond wordt omdat api gaat idle als er even geen calls zijn geweest)
+(kan even duren voordat data getoond wordt omdat api idle wordt als er even geen calls zijn geweest ~30sec)
 
 - Informatie over de wapens in dnd raadplegen
-- Wapens attacks gebruiken als template om damage to berekenen/rollen
+- Standaard aanvallen van de wapens als template gebruiken om schade to berekenen/rollen
 
 ## Weapons
 
@@ -15,31 +15,35 @@ Overzicht van alle wapens
 
 Overzicht van alle data van een specifiek wapen
 
-- Knop om de attacks van het wapen aan je lijst van attacks toe te voegen
-  Deze attacks dienen als templates en kunnen later aangepast worden
-- Drukken op properties link je naar het wapon properties scherm
+- Knop om de aanvallen van het wapen aan je lijst van attacks toe te voegen
+  Deze aanvallen dienen als templates en kunnen later aangepast worden
+- Drukken op properties linkt je naar het scherm met alle eigenschappen van het wapen
 
 ### Weapon properties
 
-Uitleg over de properties van het wapen
+Uitleg over de eigenschappen van het wapen
 
 ## Attacks
 
-Overzicht van al je attacks
+Overzicht van alle aanvallen die je kan uitvoeren.\
+De informatie wordt op de standaarmanier van dnd weergegeven.\
 
-- Drukken op een attack om damage te rollen
-- Drukken op de hamer om die attack aan te passen
+**Damage roll:** (aantal keer rollen) d (aantal zijden van de dobbelsteen) (damagetype)\
+**Range:** rangetype (normal range / long range)
+
+- Drukken op een aanval om schade te rollen
+- Drukken op de hamer om die aanval aan te passen
 
 ### Attack edit
 
-De geselecteerde attack aanpassen\
+De geselecteerde aanval aanpassen\
 Verwijderen kan door op het vuilbakje de drukken
 
-- Name: de naam van de attack
-- Damage modifier: extra damage die bij de andere rolls/modifiers wordt bijgeteld
+- Name: de naam van de aanval
+- Damage modifier: schade die bij de andere rolls/modifiers wordt bijgeteld
 - Ability type: welke ability modifier er wordt gebruikt bij de berekening
-  -> Strenght, dexterity, spellcasting of finesse (zowel strength als dexterity)
-- Damage rolls: welke dobbelstenen er gerold worden om damage te berkenen (mistens 1)
+  -> Strenght, dexterity, finesse (neemt de hoogste van strength en dexterity) of spellcasting
+- Damage rolls: welke dobbelstenen er gerold worden om schade te berkenen (mistens 1)
   - Aantal keer dat er gerold wordt
   - Aantal zijden van de dobbelsteen
   - Type van de damage
@@ -53,7 +57,7 @@ Verwijderen kan door op het vuilbakje de drukken
 ## Settings
 
 - Darkmode inschakelen
-- Modifiers instellen die gebruikt worden bij het berekenen van damage
+- Modifiers instellen die gebruikt worden bij het berekenen van schade
 
 # BRONNEN
 
